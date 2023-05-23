@@ -17,11 +17,12 @@
                     <input type="text" class="form-control" value="{{ $post->title }}" name="title">
                 </div>
                 <div class="form-group">
-                    <label>内容</label>
+                    <label>タスク内容</label>
                     <textarea class="form-control" rows="5" name="body">{{ $post->body }}</textarea>
+                    <p>エラーメッセージが入ります</p>
                 </div>
 
-                <button type="submit" class="btn btn-primary">更新する</button>
+                <button type="submit" class="btn btn-primary">登録する</button>
             </form>
         </div>
     </div>

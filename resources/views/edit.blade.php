@@ -11,15 +11,18 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <form  method="POST">
-                <div class="form-group">
                 @csrf
+                <div class="form-group">
+                    <label>日付</label>
+                    <input type="date" class="form-control" value="{{ $date->last_used_at}}">
+                </div>
+                <div class="form-group">
                     <label>共有先</label>
-                    <input type="text" class="form-control" value="{{ $post->title }}" name="title">
+                    <input type="text" class="form-control" value="{{ $user_id->title }}" name="title">
                 </div>
                 <div class="form-group">
                     <label>タスク内容</label>
-                    <textarea class="form-control" rows="5" name="body">{{ $post->body }}</textarea>
-                    <p>エラーメッセージが入ります</p>
+                    <textarea class="form-control" rows="5" name="body">{{ $content->body }}</textarea>
                 </div>
 
                 <button type="submit" class="btn btn-primary">登録する</button>

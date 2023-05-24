@@ -15,34 +15,34 @@ use Illuminate\Support\Facades\Auth;
 */
 
 // viewの確認用routes
-Route::get('/bookmark', function() {
-    return view('bookmark');
-});
+// Route::get('/bookmark', function() {
+//     return view('bookmark');
+// });
 
-Route::get('/create', function() {
-    return view('create');
-});
+// Route::get('/create', function() {
+//     return view('create');
+// });
 
-Route::get('/profile', function() {
-    return view('profile');
-});
+// Route::get('/profile', function() {
+//     return view('profile');
+// });
 
-Route::get('/show', function() {
-    return view('show');
-});
+// Route::get('/show', function() {
+//     return view('show');
+// });
 
-Route::get('/edit', function() {
-    return view('edit');
-});
-
-
+// Route::get('/edit', function() {
+//     return view('edit');
+// });
 
 
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Auth::routes();
 

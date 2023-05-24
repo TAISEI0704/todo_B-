@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="asset(css/edit.css)">
+    <link rel="stylesheet" href="{{ asset("css/edit.css") }}">
     <title>Document</title>
 </head>
 <body>
@@ -13,13 +13,11 @@
     </div>
     <div  class="header-right">
         <ul class="nav">
-            <li><a href="#">name</a></li>
+            <li><a href="#">編集</a></li>
         </ul>
     </div>
     </header>
-    <div class="container">
-    <div class="row justify-content-center">
-    <div class="col-md-8">
+    <div class="form">
         <form  method="POST">
             @csrf
             <div class="form-group">
@@ -30,7 +28,7 @@
                 <label>共有先</label>
                 <input type="text" class="form-control" value="" name="title">
             </div>
-            <div class="form-group">
+            <div class="form-content">
                 <label>タスク内容</label>
                 <textarea class="form-control" rows="5" name="body"></textarea>
             </div>
@@ -38,7 +36,6 @@
             <button type="submit" class="btn btn-primary">登録する</button>
         </form>
     </div>
- </div>
 </div>
 
 </body>

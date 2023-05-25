@@ -24,16 +24,19 @@
       <div class="task">
         <div class="title">{{ $task->title }}</div>
         <div class="content">{{ $task->contents }}</div>
-        <div>
-          <a href="{{ route('tasks.edit',$task->id) }}">編集</a>
-        </div>
-        <div>
-          <form action="{{ route('tasks.destroy',$task->id) }}" method="post">
-            @csrf
-            @method('delete')
-            <button>削除</button>
-          </form>
-        </div>
+        @if($task->user_id == Auth::user()->id)
+          <div>
+            <a href="{{ route('tasks.edit',$task->id) }}">編集</a>
+          </div>
+          <div>
+            
+            <form action="{{ route('tasks.destroy',$task->id) }}" method="post">
+              @csrf
+              @method('delete')
+              <button>削除</button>
+            </form>
+          </div>
+          @endif
       </div>
       @endforeach
     </div>

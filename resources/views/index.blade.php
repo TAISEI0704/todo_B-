@@ -27,6 +27,13 @@
         <div>
           <a href="{{ route('tasks.edit',$task->id) }}">編集</a>
         </div>
+        <div>
+          <form action="{{ route('tasks.destroy',$task->id) }}" method="post">
+            @csrf
+            @method('delete')
+            <button>削除</button>
+          </form>
+        </div>
       </div>
       @endforeach
     </div>

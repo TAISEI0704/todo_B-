@@ -67,11 +67,12 @@ class TaskController extends Controller
         return redirect()->route("tasks.index");
     }
 
-    public function destroy($id)
+    function destroy($id)
     {
+        // dd($id);
         $task = Task::find($id);
         $task->delete();
 
-        return redirect()->route("index");
+        return redirect()->route("tasks.index");
     }
 }
